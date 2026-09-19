@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -15,7 +16,7 @@
             padding: 42px 20px;
             text-align: center;
         }
-        .header font {
+        .header h1 {
             font-size: 30px;
             color: #ffffff;
             letter-spacing: 6px;
@@ -30,7 +31,7 @@
             justify-content: center;
             gap: 28px;
         }
-        .nav marquee { display: none; }
+        .nav .welcome { display: none; }
         .nav a {
             color: #2b7de0;
             text-decoration: none;
@@ -115,15 +116,16 @@
         .comment-form input[type="submit"]:hover { opacity: .88; transform: translateY(-1px); }
         /* 页脚 */
         .footer { text-align: center; padding: 22px; }
-        .footer font { font-size: 13px; color: #6b7a8d; }
+        .footer span { font-size: 13px; color: #6b7a8d; }
     </style>
 </head>
+
 <body>
     <div class="header">
-        <center><font size="6" color="red">技术博客</font></center>
+        <h1>技术博客</h1>
     </div>
     <div class="nav">
-        <marquee>欢迎阅读本站文章，欢迎留言评论！</marquee>
+        <span class="welcome">欢迎阅读本站文章，欢迎留言评论！</span>
         <a href="#">首页</a> | <a href="#">关于我们</a> | <a href="#">联系我们</a>
     </div>
     <div class="main">
@@ -136,14 +138,14 @@
                     <a href="#item2">二、语义化标签</a>
                 </div>
                 <div class="article-body">
-                    <p><font size="3">本笔记介绍 HTML5 的核心特性，适合初学者快速入门。</font></p>
+                    <p>本笔记介绍 HTML5 的核心特性，适合初学者快速入门。</p>
                     <img src="html5-logo.png">
-                    <p>HTML5 是新一代网页标准，支持多媒体、绘图与语义化等丰富特性。</p>
-                    <p>在编写网页时，应尽量使用语义化标签，让结构更清晰、更利于 SEO。</p>
+                    <p id="item1">HTML5 是新一代网页标准，支持多媒体、绘图与语义化等丰富特性。</p>
+                    <p id="item2">在编写网页时，应尽量使用语义化标签，让结构更清晰、更利于 SEO。</p>
                 </div>
             </div>
         </div>
-        <div id="content">
+        <div id="comments">
             <div class="card">
                 <b>发表评论</b>
                 <form class="comment-form" action="comment.php" method="post">
@@ -155,7 +157,7 @@
         </div>
     </div>
     <div class="footer">
-        <font size="2">版权所有 © 2026 某某公司</font>
+        <span>版权所有 © 2026 某某公司</span>
     </div>
 </body>
 </html>
