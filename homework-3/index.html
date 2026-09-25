@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8f6">
+  <meta name="description" content="知序 AI 助教答疑平台，帮助你梳理问题、找到下一步。">
+  <title>知序 · AI 助教答疑平台</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="home">
+  <div class="site-shell">
+    <header class="site-header container">
+      <a class="brand" href="index.html" aria-label="知序，返回首页">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>知序<span class="brand-dot">.</span></span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a class="nav-link active" href="index.html" aria-current="page">首页</a>
+        <a class="nav-link" href="register.html">创建学习档案</a>
+      </nav>
+      <a class="header-login" href="login.html">登录 <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-spark" aria-hidden="true">✦</span> YOUR LEARNING COMPANION</div>
+          <h1 id="hero-title">每一个好问题，<br>都值得被<span class="highlight">认真回答<span class="highlight-line" aria-hidden="true"></span></span>。</h1>
+          <p class="hero-lead">从卡住的那一步开始，把复杂知识变成清晰的思路。随时提问，按自己的节奏，慢慢学会。</p>
+          <a class="primary-link" href="#ask">开始提问 <span aria-hidden="true">↗</span></a>
+          <div class="hero-proof"><span class="proof-icon" aria-hidden="true">✳</span><span>为每一次“我还不懂”留出空间</span></div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-grid"></div>
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <span class="visual-star star-one">✦</span><span class="visual-star star-two">✳</span>
+          <div class="floating-note note-question"><span class="mini-avatar">?</span><span>这个知识点，能再讲简单一点吗？</span></div>
+          <div class="visual-core"><div class="core-halo"></div><div class="core-symbol"><span></span><span></span><span></span><span></span></div></div>
+          <div class="floating-note note-answer"><span class="answer-check">✓</span><span>当然，我们从第一步开始。</span></div>
+          <div class="visual-caption">把困惑，变成下一次的顿悟。</div>
+        </div>
+      </section>
+
+      <section class="ask-section" id="ask" aria-labelledby="ask-title">
+        <div class="container ask-layout">
+          <div class="section-heading">
+            <p class="section-kicker">01 / ASK A QUESTION</p>
+            <h2 id="ask-title">此刻，你想弄懂什么？</h2>
+            <p>知识点、解题思路、学习方法，都可以从这里开始。</p>
+          </div>
+          <div class="ask-card">
+            <form id="question-form">
+              <div class="ask-card-head"><span class="online-dot"></span> 向知序提问 <span class="demo-tag">交互演示</span></div>
+              <label for="question" class="sr-only">输入你的问题</label>
+              <textarea id="question" name="question" required minlength="8" maxlength="500" placeholder="例如：为什么一元二次方程的判别式可以判断根的个数？" aria-describedby="question-help"></textarea>
+              <div class="ask-bottom">
+                <label class="subject-picker" for="subject"><span aria-hidden="true">▦</span><span class="sr-only">选择学科</span><select id="subject" name="subject" aria-label="选择学科"><option value="通用">选择学科</option><option value="数学">数学</option><option value="语文">语文</option><option value="英语">英语</option><option value="物理">物理</option><option value="化学">化学</option><option value="学习方法">学习方法</option></select></label>
+                <span id="question-help" class="character-count">至少 8 字 · <output id="question-count">0</output>/500</span>
+                <button class="button button-primary ask-submit" type="submit">获取思路 <span aria-hidden="true">↗</span></button>
+              </div>
+            </form>
+            <div class="prompt-row"><span>试试这样问</span><button type="button" class="prompt-chip" data-question="如何理解一元二次方程判别式的作用？" data-subject="数学">判别式怎么理解？</button><button type="button" class="prompt-chip" data-question="英语阅读理解总是做不完，有什么提高速度的方法？" data-subject="英语">阅读速度怎么提高？</button></div>
+          </div>
+          <section class="answer-panel" id="answer-panel" aria-live="polite" aria-label="回答展示区域">
+            <div class="answer-placeholder" id="answer-placeholder"><span class="placeholder-icon" aria-hidden="true">✳</span><div><h3 id="answer-title">你的思路，会在这里展开</h3><p>写下问题并提交，看看知序如何帮你拆解。</p></div></div>
+            <div class="answer-content" id="answer-content" hidden><div class="answer-label"><span class="answer-spark" aria-hidden="true">✦</span> 知序的思路 <span>演示回答</span></div><h3 id="answer-question"></h3><p id="answer-intro"></p><ol id="answer-steps"></ol><p class="answer-next" id="answer-next"></p><p class="answer-disclaimer">当前为预设回答演示，尚未接入 AI 服务。</p></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="feature-section container" aria-labelledby="feature-title"><div class="feature-intro"><p class="section-kicker">LEARN YOUR WAY</p><h2 id="feature-title">让学习，回到你的节奏。</h2><p>提问只是开始。找到适合自己的方式，才是持续向前的关键。</p></div><div class="feature-grid"><article class="feature-card"><span class="feature-icon icon-blue" aria-hidden="true">◎</span><h3>从问题出发</h3><p>把模糊的困惑写出来，先找到真正卡住的地方。</p></article><article class="feature-card"><span class="feature-icon icon-peach" aria-hidden="true">↗</span><h3>一步步理清</h3><p>用更容易理解的步骤，重新串起知识与思路。</p></article><article class="feature-card"><span class="feature-icon icon-green" aria-hidden="true">✳</span><h3>按兴趣探索</h3><p>创建学习档案，记录自己关注的学科与目标。</p></article></div></section>
+    </main>
+    <footer class="site-footer container"><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>知序<span class="brand-dot">.</span></span></a><p>让每个问题，都有一个温柔的开始。</p><span>© 2026 知序 · 前端演示项目</span></footer>
+  </div>
+</body>
+</html>

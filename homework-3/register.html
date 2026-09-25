@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8f6">
+  <title>创建学习档案 · 知序</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="register">
+  <div class="auth-page">
+    <header class="auth-header container"><a class="brand" href="index.html" aria-label="知序，返回首页"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>知序<span class="brand-dot">.</span></span></a><a class="back-link" href="index.html">← 返回首页</a></header>
+    <main class="auth-main container">
+      <div class="auth-card register-card">
+        <aside class="auth-aside"><div class="aside-top"><span class="aside-kicker">START HERE · 01</span><h1>你的学习旅程，<br>从<span>这里</span>开始。</h1><p>给自己一份专属的学习档案。每一次提问，都是向前迈出的一小步。</p></div><div class="aside-art" aria-hidden="true"><div class="aside-orbit aside-orbit-a"></div><div class="aside-orbit aside-orbit-b"></div><span class="aside-art-star star-a">✦</span><span class="aside-art-star star-b">✳</span><div class="art-paper"><span class="paper-dot"></span><span class="paper-line paper-line-a"></span><span class="paper-line paper-line-b"></span><span class="paper-line paper-line-c"></span><span class="paper-accent">✳</span></div><div class="art-badge">每天进步一点点 ↗</div></div><div class="aside-footer">好奇心，是最好的起点。 <span>✦</span></div></aside>
+        <div class="auth-form-area"><div class="form-topline"><span>CREATE ACCOUNT</span><span>01 / 02</span></div><div class="form-heading"><h2>创建学习档案</h2><p>先认识一下你，让学习从你感兴趣的地方开始。</p></div>
+          <form id="register-form" class="stacked-form">
+            <div class="field-row"><div class="field"><label for="reg-name">你的称呼 <span class="required-mark">*</span></label><input id="reg-name" name="name" type="text" required minlength="2" maxlength="20" autocomplete="nickname" placeholder="怎么称呼你？"><small>2–20 个字</small></div><div class="field"><label for="reg-stage">学习阶段 <span class="required-mark">*</span></label><select id="reg-stage" name="stage" required><option value="" selected disabled>请选择阶段</option><option value="初中">初中</option><option value="高中">高中</option><option value="大学">大学</option><option value="自我提升">自我提升</option></select></div></div>
+            <div class="field"><label for="reg-email">邮箱地址 <span class="required-mark">*</span></label><input id="reg-email" name="email" type="email" required maxlength="254" autocomplete="email" inputmode="email" placeholder="name@example.com"><small>用于登录演示</small></div>
+            <div class="field"><label for="reg-phone">手机号码 <span class="optional-label">选填</span></label><input id="reg-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" pattern="1[3-9][0-9]{9}" title="请输入 11 位中国大陆手机号码" placeholder="例如 13800138000"><small>填写时请输入 11 位中国大陆手机号码</small></div>
+            <fieldset class="interest-field"><legend>感兴趣的学科 <span class="optional-label">可多选</span></legend><div class="interest-options"><label><input type="checkbox" name="interests" value="数学"><span>数学</span></label><label><input type="checkbox" name="interests" value="语文"><span>语文</span></label><label><input type="checkbox" name="interests" value="英语"><span>英语</span></label><label><input type="checkbox" name="interests" value="物理"><span>物理</span></label><label><input type="checkbox" name="interests" value="化学"><span>化学</span></label><label><input type="checkbox" name="interests" value="其他"><span>其他</span></label></div></fieldset>
+            <div class="field-row password-row"><div class="field"><label for="reg-password">设置密码 <span class="required-mark">*</span></label><div class="password-wrap"><input id="reg-password" name="password" type="password" required minlength="8" maxlength="32" pattern="(?=.*[A-Za-z])(?=.*[0-9]).{8,32}" title="密码需为 8–32 位，且同时包含字母和数字" autocomplete="new-password" placeholder="至少 8 位，含字母和数字" aria-describedby="password-hint"><button class="password-toggle" type="button" data-toggle-password="reg-password" aria-label="显示密码" aria-pressed="false">显示</button></div></div><div class="field"><label for="reg-confirm">确认密码 <span class="required-mark">*</span></label><div class="password-wrap"><input id="reg-confirm" name="confirm" type="password" required minlength="8" maxlength="32" autocomplete="new-password" placeholder="再次输入密码" aria-describedby="confirm-hint"><button class="password-toggle" type="button" data-toggle-password="reg-confirm" aria-label="显示确认密码" aria-pressed="false">显示</button></div></div></div>
+            <p class="form-hint" id="password-hint">密码需为 8–32 位，同时包含字母和数字。</p><p class="form-hint confirm-hint" id="confirm-hint">请再次输入相同密码。</p>
+            <button class="button button-primary form-submit" type="submit">创建学习档案 <span aria-hidden="true">↗</span></button><p class="form-status" id="register-status" role="status" aria-live="polite"></p><p class="switch-auth">已经有账号？<a href="login.html">去登录 <span aria-hidden="true">→</span></a></p>
+          </form>
+        </div>
+      </div>
+      <p class="auth-note">前端交互演示 · 学习档案仅保存在当前浏览会话中</p>
+    </main>
+  </div>
+</body>
+</html>

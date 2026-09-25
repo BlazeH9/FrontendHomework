@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8f6">
+  <title>登录 · 知序</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="login">
+  <div class="auth-page">
+    <header class="auth-header container"><a class="brand" href="index.html" aria-label="知序，返回首页"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>知序<span class="brand-dot">.</span></span></a><a class="back-link" href="index.html">← 返回首页</a></header>
+    <main class="auth-main container login-main">
+      <div class="auth-card login-card">
+        <aside class="auth-aside login-aside"><div class="aside-top"><span class="aside-kicker">WELCOME BACK · 02</span><h1>欢迎回来，<br>继续你的<span>探索</span>。</h1><p>上次没弄懂的地方，今天我们接着来。学习的答案，总会一步步变清晰。</p></div><div class="aside-art" aria-hidden="true"><div class="aside-orbit aside-orbit-a"></div><div class="aside-orbit aside-orbit-b"></div><span class="aside-art-star star-a">✦</span><span class="aside-art-star star-b">✳</span><div class="art-paper login-paper"><span class="paper-dot"></span><span class="paper-line paper-line-a"></span><span class="paper-line paper-line-b"></span><span class="paper-line paper-line-c"></span><span class="paper-accent">✓</span></div><div class="art-badge">今天也一起加油 ↗</div></div><div class="aside-footer">每一次回来，都有新的发现。 <span>✦</span></div></aside>
+        <div class="auth-form-area login-form-area"><div class="form-topline"><span>WELCOME BACK</span><span>02 / 02</span></div><div class="form-heading"><h2>登录知序</h2><p>输入邮箱和密码，继续你的学习旅程。</p></div>
+          <form id="login-form" class="stacked-form"><div class="field"><label for="login-email">邮箱地址 <span class="required-mark">*</span></label><input id="login-email" name="email" type="email" required maxlength="254" autocomplete="email" inputmode="email" placeholder="name@example.com"></div><div class="field"><label for="login-password">密码 <span class="required-mark">*</span></label><div class="password-wrap"><input id="login-password" name="password" type="password" required minlength="8" maxlength="32" autocomplete="current-password" placeholder="输入你的密码"><button class="password-toggle" type="button" data-toggle-password="login-password" aria-label="显示密码" aria-pressed="false">显示</button></div></div><label class="remember-label"><input id="remember-email" type="checkbox" name="remember"><span>记住我的邮箱</span></label><button class="button button-primary form-submit" type="submit">登录并开始学习 <span aria-hidden="true">↗</span></button><p class="form-status" id="login-status" role="status" aria-live="polite"></p><p class="switch-auth">还没有学习档案？<a href="register.html">立即创建 <span aria-hidden="true">→</span></a></p></form>
+          <div class="demo-explainer"><span aria-hidden="true">ⓘ</span><p>演示模式：表单通过校验即可进入首页，不会验证真实账号或保存密码。</p></div>
+        </div>
+      </div>
+      <p class="auth-note">前端交互演示 · 无需连接账号服务</p>
+    </main>
+  </div>
+</body>
+</html>
